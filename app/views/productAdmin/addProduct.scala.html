@@ -14,7 +14,7 @@ though a static HTML form would also work -->
 	
 	<!-- Use the views.html.helpers package to create the form -->
 	@form(action = routes.AdminProductCtrl.addProductSubmit(), 'class -> "form-horizontal", 'role->"form", 'enctype -> "multipart/form-data") {
-		
+		@CSRF.formField
 		<!-- Build the form, adding an input for each field -->
 		<!-- Note the label parameter -->
 		@inputText(addProductForm("name"), '_label -> "Name",'class -> "form-control")
